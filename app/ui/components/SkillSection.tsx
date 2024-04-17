@@ -16,7 +16,7 @@ export default function SkillSection() {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index:any) => {
     setHoveredCard(index);
   };
 
@@ -24,12 +24,12 @@ export default function SkillSection() {
     setHoveredCard(null);
   };
 
-  const calculateSkew = (index) => {
+  const calculateSkew = (index:any) => {
     if (index === hoveredCard) {
       const grid = document.querySelector('.grid');
       if (grid) {
         const gridRect = grid.getBoundingClientRect();
-        const card = document.querySelector(`.skill-card:nth-child(${index + 1})`);
+        const card = document.querySelector(`.skill-card:nth-child(${index + 1})`)!;
         const cardRect = card.getBoundingClientRect();
         const mouseX = cursorPosition.x - gridRect.left;
         const mouseY = cursorPosition.y - gridRect.top;
@@ -77,7 +77,7 @@ export default function SkillSection() {
           </p>
         </div>
         <div className="grid grid-cols-4 gap-5 justify-evenly items-center w-full md:w-1/2">
-          {percentages.map((element, index) => (
+          {percentages.map((element :any, index: number) => (
             <div
               className={`skill-card w-[60px] md:w-[80px] lg:w-[100px] border border-green-400 rounded-md p-2 ${hoveredCard === index ? 'hovered' : ''}`}
               key={element.text}
