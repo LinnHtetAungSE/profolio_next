@@ -1,0 +1,76 @@
+.wrapper {
+    font-size: 10rem;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    perspective: 100px;
+}
+
+/* .animated-text {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg);
+    font-family: Deathstar, Verdana, Geneva, Tahoma, sans-serif;
+    perspective: 200px;
+    animation: scroll 30s ease-in;
+    animation-iteration-count: infinite;
+    font-size: 3vw;
+} */
+
+.text-con {
+    font-family: Deathstar, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes scroll {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -7500px
+    }
+}
+
+@keyframes starwars {
+    0% {
+        transform: rotateX(20deg) translateY(750px);
+    }
+
+    100% {
+        transform: rotateX(20deg) translateY(-1500px);
+    }
+}
+
+@keyframes starwars1200 {
+    0% {
+        transform: rotateX(20deg) translateY(565px);
+    }
+
+    100% {
+        transform: rotateX(20deg) translateY(-1500px);
+    }
+}
+
+/* @media only screen and (max-width: 1200px) {
+    .crawl {
+        font-size: 1rem;
+    }
+
+    .crawl div {
+        animation: starwars1200 30s ease-in;
+    }
+} */
+
+@font-face {
+    font-family: 'Deathstar';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('https://cdn.designly.biz/fonts/deathstar/death_star-webfont.eot');
+    src: local(''),
+        url('https://cdn.designly.biz/fonts/deathstar/death_star-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.designly.biz/fonts/deathstar/death_star-webfont.woff2') format('woff2'),
+        url('https://cdn.designly.biz/fonts/deathstar/death_star-webfont.woff') format('woff'),
+        url('https://cdn.designly.biz/fonts/deathstar/deathstar.otf') format('opentype'),
+        url('https://cdn.designly.biz/fonts/deathstar/death_star-webfont.svg') format('svg');
+}
