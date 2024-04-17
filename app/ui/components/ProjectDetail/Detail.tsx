@@ -58,6 +58,7 @@ export default function Detail() {
             setIsScrollingStop(true);
             setTimeout(() => {
                 if (scrollRef.current) {
+                    // eslint-disable-next-line react-hooks/exhaustive-deps
                     scrollInterval = setInterval(() => {
                         scrollRef.current.scrollTop += 1;
                         if (
