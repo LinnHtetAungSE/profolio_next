@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
 import StartupVideo from './StartupVideo';
 import { Project } from '@/db/data';
@@ -58,21 +59,23 @@ export default function Detail() {
             setIsScrollingStop(true);
             setTimeout(() => {
                 if (scrollRef.current) {
-                    // eslint-disable-next-line react-hooks/exhaustive-deps
-                    scrollInterval = setInterval(() => {
-                        scrollRef.current.scrollTop += 1;
-                        if (
-                            scrollRef.current.scrollTop ===
-                            scrollRef.current.scrollHeight -
-                            scrollRef.current.clientHeight
-                        ) {
-                            clearInterval(scrollInterval);
-                            setPadding('pt-[20px]');
+                    let scrollInterval = setInterval(() => {
+                        if (scrollRef.current) {
+                            scrollRef.current.scrollTop += 1;
+                            if (
+                                scrollRef.current.scrollTop ===
+                                scrollRef.current.scrollHeight -
+                                scrollRef.current.clientHeight
+                            ) {
+                                clearInterval(scrollInterval);
+                                setPadding('pt-[20px]');
+                            }
                         }
                     }, 5);
                 }
             }, 500);
         }
+
         if (isScrollingStop) {
             clearInterval(scrollInterval);
         }
