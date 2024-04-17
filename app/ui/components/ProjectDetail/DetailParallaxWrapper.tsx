@@ -6,10 +6,9 @@ import Detail from './Detail';
 const roadMapBackgroundDir = "/gallaxy_background.mp4";
 
 export default function DetailParallaxWrapper() {
-    const ref = useRef();
   return (
     <div>
-        <Parallax pages={1} ref={ref}>
+        <Parallax pages={1}>
             <ParallaxLayer
                 offset={0}
                 speed={1}
