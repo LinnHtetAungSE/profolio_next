@@ -10,9 +10,8 @@ const roadMapBackgroundDir = "/gallaxy_background.mp4";
 const infoBackgroundDir = "/info_background.mp4";
 
 export default function MainParallaxWrapper() {
-  const ref = useRef();
     return (
-      <Parallax pages={3} ref={ref}> 
+      <Parallax pages={3}> 
         {/* <ParallaxLayer
           offset={0}
           speed={1}

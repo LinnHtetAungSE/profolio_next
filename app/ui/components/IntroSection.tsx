@@ -50,10 +50,10 @@ export default function Intro() {
   //   }, []);
     
   return (
-    <section className="w-full h-full flex flex-col md:flex-row justify-center md:justify-between items-center px-4 md:px-24">
+    <section className="w-full h-full flex flex-col md:flex-row justify-center md:justify-between items-center px-4 md:px-10 lg:px-24">
         <div className="my-10 md:mt-0">
           <p className="text-slate-200 font-semibold">Hi! {`I'm`}</p>
-          <p className="text-slate-200 text-5xl font-bold">Linn Htet Aung</p>
+          <p className="text-slate-200 text-5xl font-bold mb-5 md:mb-0">Linn Htet Aung</p>
         <p className="relative text-slate-200 text-lg font-bold overflow-hidden">
           Creative
           <span data-text={positionArray[positionStyle.positionIndex]} className={`absolute ${positionStyle.class} ${positionStyle.class === 'normal' && 'hidden'} text-lg font-bold mx-[6px] overflow-hidden bg-black`}>
