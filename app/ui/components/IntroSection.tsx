@@ -70,7 +70,7 @@ export default function Intro() {
               <div className="face border-2 border-green-400">5</div> 
               <div className="face border-2 border-green-400">6</div> 
             </div>
-            <img src="/nobita.jpg" className="profile_img w-[250px] md:w-[350px]" alt="profile"/>
+            <img src="/selfie.jpg" className="profile_img w-[250px] md:w-[350px]" alt="profile"/>
         </div>
       </section>
   )
