@@ -158,7 +158,7 @@ export const projects: Array<Project> = [
   {
     title: "Job Recruitment And Offering Management System",
     description: "",
-    company: "Ace Inspiration",
+    company: "Ace ",
     team: {
       name: "Joblify",
       members: 4,

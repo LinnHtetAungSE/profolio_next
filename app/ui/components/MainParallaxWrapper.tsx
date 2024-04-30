@@ -43,12 +43,27 @@ export default function MainParallaxWrapper() {
           <SkillSection/>
         </ParallaxLayer>
         <ParallaxLayer
+          className='hidden md:block'
           offset={1.99}
           speed={1}
           factor={2}
           style={{
             position: 'fixed',
             width: '100%',
+            zIndex: '-1'
+          }}>
+          <video autoPlay loop muted style={{ width: '100%', height: '150%' }}>
+            <source src={roadMapBackgroundDir} type='video/mp4'/>
+          </video>
+        </ParallaxLayer>
+        <ParallaxLayer
+          className='block md:hidden'
+          offset={1.99}
+          speed={1}
+          factor={2}
+          style={{
+            position: 'fixed',
+            width: '100%',  
             zIndex: '-1'
           }}>
           <video autoPlay loop muted style={{ width: '100%', height: '150%' }}>
